@@ -1,10 +1,12 @@
-package com.example.teamscoding
+package com.example.teamscoding.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
+import com.example.teamscoding.MainActivity
+import com.example.teamscoding.R
 
 class SplashActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
