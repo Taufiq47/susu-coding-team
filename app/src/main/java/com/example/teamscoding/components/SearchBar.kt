@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -37,6 +38,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchBar(
     query: String,
@@ -49,7 +51,7 @@ fun SearchBar(
             .background(Color.White, shape = RoundedCornerShape(20.dp))
             .height(46.dp)
             .border(
-                border = BorderStroke(width = 1.dp, color = Color.Gray),
+                border = BorderStroke(width = 1.dp, color = Color.LightGray),
                 shape = RoundedCornerShape(20.dp)
             ),
         verticalAlignment = Alignment.CenterVertically
@@ -65,6 +67,10 @@ fun SearchBar(
                 topEnd = 0.dp,
                 bottomEnd = 0.dp,
                 bottomStart = 20.dp
+            ),
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                focusedBorderColor = Color.LightGray,
+                unfocusedBorderColor = Color.LightGray
             ),
             placeholder = {
                 Text(
@@ -109,7 +115,7 @@ fun KategoriDropdown(label: String) {
                 .fillMaxWidth()
                 .height(46.dp)
                 .clip(RoundedCornerShape(20.dp))
-                .border(BorderStroke(1.dp, Color.Gray), RoundedCornerShape(20.dp))
+                .border(BorderStroke(1.dp, Color.LightGray), RoundedCornerShape(20.dp))
                 .padding(0.dp)
                 .background(Color.White),
             placeholder = {
