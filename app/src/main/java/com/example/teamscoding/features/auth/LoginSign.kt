@@ -1,4 +1,4 @@
-package com.example.teamscoding.auth
+package com.example.teamscoding.features.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border

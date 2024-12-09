@@ -1,4 +1,4 @@
-package com.example.teamscoding.biodata
+package com.example.teamscoding.features.biodata
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -33,10 +33,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
-import com.example.teamscoding.ui.BeratBadan
-import com.example.teamscoding.ui.DropdownTextField
-import com.example.teamscoding.ui.JenisKelamin
-import com.example.teamscoding.ui.textField
+import com.example.teamscoding.components.BeratBadan
+import com.example.teamscoding.components.DropdownTextField
+import com.example.teamscoding.components.JenisKelamin
+import com.example.teamscoding.components.textField
 import com.example.teamscoding.ui.theme.GrayText
 import com.example.teamscoding.ui.theme.GreenText
 import com.example.teamscoding.ui.theme.poppinsFontFamily

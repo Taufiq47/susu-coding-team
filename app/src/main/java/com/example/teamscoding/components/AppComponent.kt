@@ -1,4 +1,4 @@
-package com.example.teamscoding.ui
+package com.example.teamscoding.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
