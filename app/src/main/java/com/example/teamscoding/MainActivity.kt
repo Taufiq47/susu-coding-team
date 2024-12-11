@@ -39,6 +39,8 @@ import com.example.teamscoding.features.auth.loginPage
 import com.example.teamscoding.features.auth.loginsign
 import com.example.teamscoding.features.belanja.BelanjaPage
 import com.example.teamscoding.features.artikel.ArtikelPage
+import com.example.teamscoding.features.artikel.DetailArtikel
+import com.example.teamscoding.features.belanjaDetail.DetailProdukPage
 import com.example.teamscoding.features.home.Home
 import com.example.teamscoding.ui.theme.GreenText
 import com.example.teamscoding.ui.theme.TeamSCodingTheme
@@ -108,9 +110,11 @@ fun AppNavigation() {
     ) {
         NavHost(navController, startDestination = Screens.Home.route) {
             composable(Screens.Home.route) { Home() }
-            composable(Screens.Artikel.route) { ArtikelPage() }
-            composable(Screens.Belanja.route) { BelanjaPage() }
+            composable(Screens.Artikel.route) { ArtikelPage(navController) }
+            composable(Screens.Belanja.route) { BelanjaPage(navController) }
             composable(Screens.Profil.route) { ProfilPage() }
+            composable(Screens.DetailArtikel.route) { DetailArtikel(navController) }
+            composable(Screens.DetailBelanja.route) { DetailProdukPage(navController) }
         }
     }
 }

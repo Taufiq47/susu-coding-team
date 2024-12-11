@@ -15,21 +15,25 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.example.teamscoding.ui.theme.GreenText
 import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
-fun artikelCard() {
+fun artikelCard(navController: NavHostController) {
     Column(
         modifier = Modifier
             .border(BorderStroke(1.dp, Color.Gray), RoundedCornerShape(12.dp))
@@ -98,11 +102,32 @@ fun artikelCard() {
                 )
             }
         }
+
+        Button(
+            onClick = { navController.navigate("detailartikel") },
+            modifier = Modifier
+                .fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = GreenText // Warna tombol
+            ),
+            shape = RoundedCornerShape(8.dp)
+        ) {
+            Text(
+                text = "Lihat",
+                color = Color.White, // Warna teks putih agar kontras dengan tombol hijau
+                style = TextStyle(
+                    fontSize = 12.sp,
+                    fontFamily = poppinsFontFamily,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black
+                )
+            )
+        }
     }
 }
 
-@Preview
-@Composable
-fun viewArtikel() {
-    artikelCard()
-}
+//@Preview
+//@Composable
+//fun viewArtikel() {
+//    artikelCard(navController = NavController(LocalContext.current))
+//}

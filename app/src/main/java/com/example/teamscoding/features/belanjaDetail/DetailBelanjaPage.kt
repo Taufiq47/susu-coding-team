@@ -2,6 +2,7 @@ package com.example.teamscoding.features.belanjaDetail
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -26,11 +27,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.teamscoding.R
 import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
-fun DetailProdukPage() {
+fun DetailProdukPage(navController: NavController) {
     var quantity by remember { mutableStateOf(1) }
 
     LazyColumn(
@@ -50,7 +52,8 @@ fun DetailProdukPage() {
                     modifier = Modifier
                         .wrapContentWidth()
                         .height(50.dp)
-                        .padding(start =40.dp, end= 40.dp),
+                        .padding(start =40.dp, end= 40.dp)
+                        .clickable(onClick = { navController.popBackStack() }),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
@@ -196,8 +199,8 @@ fun DetailProdukPage() {
     }
 }
 
-@Preview
-@Composable
-fun DetailBelanja() {
-    DetailProdukPage()
-}
+//@Preview
+//@Composable
+//fun DetailBelanja() {
+//    DetailProdukPage()
+//}

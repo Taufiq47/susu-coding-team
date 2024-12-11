@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -18,11 +19,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.teamscoding.R
 import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
-fun BelanjaItem(modifier: Modifier = Modifier) {
+fun BelanjaItem(modifier: Modifier = Modifier, navController: NavHostController) {
     Row(
         modifier = Modifier
             .border(BorderStroke(0.5.dp, Color.Gray), RoundedCornerShape(12.dp))
@@ -80,7 +82,7 @@ fun BelanjaItem(modifier: Modifier = Modifier) {
         }
 
         Button(
-            onClick = { /* Handle Detail button click */ },
+            onClick = { navController.navigate("detailbelanja") },
             modifier = Modifier
                 .height(32.dp)
                 .padding(),
@@ -96,8 +98,8 @@ fun BelanjaItem(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview
-@Composable
-fun BelanjaItemPreview() {
-    BelanjaItem()
-}
+//@Preview
+//@Composable
+//fun BelanjaItemPreview() {
+//    BelanjaItem()
+//}

@@ -33,6 +33,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -41,6 +42,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.teamscoding.R
 import com.example.teamscoding.components.KategoriDropdown
 import com.example.teamscoding.components.SearchBar
@@ -50,7 +52,7 @@ import com.example.teamscoding.ui.theme.GreenText
 import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
-fun DetailArtikel(onIconClick: () -> Unit) {
+fun DetailArtikel(navController: NavController) {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -69,7 +71,7 @@ fun DetailArtikel(onIconClick: () -> Unit) {
                         .wrapContentWidth()
                         .height(50.dp)
                         .padding(end = 2.dp)
-                        .clickable(onClick = onIconClick),
+                        .clickable(onClick = { navController.popBackStack() }),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
@@ -319,5 +321,5 @@ fun DetailArtikel(onIconClick: () -> Unit) {
 @Preview
 @Composable
 fun DetailView() {
-    DetailArtikel(onIconClick = {})
+    DetailArtikel(navController = NavController(LocalContext.current))
 }

@@ -27,8 +27,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.example.teamscoding.R
 import com.example.teamscoding.components.DropdownTextField
 import com.example.teamscoding.components.KategoriDropdown
@@ -38,7 +41,7 @@ import com.example.teamscoding.components.textField
 import com.example.teamscoding.ui.theme.BackroundListArtikel
 
 @Composable
-fun ArtikelPage() {
+fun ArtikelPage(navController: NavHostController) {
     var searchQuery by remember { mutableStateOf("") }
 
     LazyColumn(
@@ -73,15 +76,15 @@ fun ArtikelPage() {
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 for (i in 1..10) {
-                    artikelCard()
+                    artikelCard(navController = navController)
                 }
             }
         }
     }
 }
 
-@Preview
-@Composable
-fun artikelView() {
-    ArtikelPage()
-}
+//@Preview
+//@Composable
+//fun artikelView() {
+//    ArtikelPage()
+//}

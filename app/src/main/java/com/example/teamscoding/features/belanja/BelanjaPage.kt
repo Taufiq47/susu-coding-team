@@ -30,13 +30,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.teamscoding.R
 import com.example.teamscoding.components.BelanjaItem
 import com.example.teamscoding.components.SearchBar
 import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
-fun BelanjaPage() {
+fun BelanjaPage(navController: NavHostController) {
     var searchQuery by remember { mutableStateOf("") }
 
     LazyColumn(
@@ -116,15 +117,15 @@ fun BelanjaPage() {
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 for (i in 1..10) {
-                    BelanjaItem()
+                    BelanjaItem(navController = navController)
                 }
             }
         }
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun Belanja() {
-    BelanjaPage()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun Belanja() {
+//    BelanjaPage()
+//}
