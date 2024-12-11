@@ -27,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
+import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
 fun DetailProdukPage() {
@@ -104,6 +105,7 @@ fun DetailProdukPage() {
                     text = "Kangkung Murah Segar",
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
+                        fontFamily = poppinsFontFamily,
                         fontSize = 24.sp
                     )
                 )
@@ -161,6 +163,7 @@ fun DetailProdukPage() {
                     text = "Deskripsi",
                     style = TextStyle(
                         fontSize = 20.sp,
+                        fontFamily = poppinsFontFamily,
                         fontWeight = FontWeight.Bold
                     )
                 )
@@ -171,7 +174,8 @@ fun DetailProdukPage() {
                     text = "Kangkung adalah sayuran hijau yang kaya akan nutrisi penting untuk ibu hamil. Sayuran ini mengandung zat besi yang membantu mencegah anemia, asam folat yang mendukung perkembangan janin, serta serat untuk menjaga pencernaan tetap sehat selama kehamilan. Selain itu, kangkung juga rendah kalori dan mudah diolah menjadi berbagai hidangan lezat.",
                     color = Color.Gray,
                     style = TextStyle(
-                        fontSize = 16.sp
+                        fontSize = 16.sp,
+                        fontFamily = poppinsFontFamily
                     )
                 )
 
@@ -184,7 +188,8 @@ fun DetailProdukPage() {
                         .padding(top = 16.dp),
                     colors = ButtonDefaults.buttonColors(Color(0xFF08B28D))
                 ) {
-                    Text("Tambah Keranjang")
+                    Text(text = "Tambah Keranjang",
+                        style = TextStyle(fontFamily = poppinsFontFamily))
                 }
             }
         }

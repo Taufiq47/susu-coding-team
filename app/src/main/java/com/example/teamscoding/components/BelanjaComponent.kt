@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
+import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
 fun BelanjaItem(modifier: Modifier = Modifier) {
@@ -54,7 +55,8 @@ fun BelanjaItem(modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = "Kangkung",
-                fontSize = 16.sp,
+                fontSize = 14.sp,
+                fontFamily = poppinsFontFamily,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
             )
@@ -62,6 +64,7 @@ fun BelanjaItem(modifier: Modifier = Modifier) {
             Text(
                 text = "Toko Pak Man",
                 fontSize = 12.sp,
+                fontFamily = poppinsFontFamily,
                 color = Color.Gray
             )
 
@@ -70,6 +73,7 @@ fun BelanjaItem(modifier: Modifier = Modifier) {
             Text(
                 text = "Rp. 2.000 / ikat",
                 fontSize = 12.sp,
+                fontFamily = poppinsFontFamily,
                 fontWeight = FontWeight.Bold,
                 color = Color(0xFF08B28D)
             )
@@ -84,6 +88,7 @@ fun BelanjaItem(modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = "Detail",
+                fontFamily = poppinsFontFamily,
                 color = Color.White,
                 fontSize = 12.sp
             )

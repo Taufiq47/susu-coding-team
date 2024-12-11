@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
+import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
 fun SignUpPage() {
@@ -47,6 +48,7 @@ fun SignUpPage() {
             Text(
                 text = "SIGN UP",
                 fontSize = 40.sp,
+                fontFamily = poppinsFontFamily,
                 fontWeight = FontWeight.W900,
                 color = Color(0xFF2C5F2D),
                 modifier = Modifier
@@ -139,7 +141,7 @@ fun SignUpPage() {
         )
 
         if (showPasswordError) {
-            Text(text = "Password cannot be empty", color = Color.Red, fontSize = 12.sp)
+            Text(text = "Password cannot be empty", color = Color.Red, fontFamily = poppinsFontFamily, fontSize = 12.sp)
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -155,7 +157,7 @@ fun SignUpPage() {
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF08B28D))
         ) {
-            Text(text = "Sign Up", color = Color.White)
+            Text(text = "Sign Up", color = Color.White, fontFamily = poppinsFontFamily,)
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -167,11 +169,13 @@ fun SignUpPage() {
             Text(
                 text = "Already have an account? ",
                 fontSize = 14.sp,
+                fontFamily = poppinsFontFamily,
                 color = Color.Black
             )
             Text(
                 text = "Login",
                 fontSize = 14.sp,
+                fontFamily = poppinsFontFamily,
                 color = Color.Blue
             )
         }
