@@ -33,18 +33,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.teamscoding.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchBar(
     query: String,
     onQueryChanged: (String) -> Unit,
+    placeholderTextId: Int,
     onIconClick: () -> Unit
 ) {
+    val placeholderText = stringResource(id = placeholderTextId)
+
     Row(
         modifier = Modifier
             .width(242.dp)
@@ -74,7 +79,7 @@ fun SearchBar(
             ),
             placeholder = {
                 Text(
-                    text = "Cari Artikel...",
+                    text = placeholderText,
                     style = TextStyle(
                         fontSize = 12.sp,
                         color = Color.Gray

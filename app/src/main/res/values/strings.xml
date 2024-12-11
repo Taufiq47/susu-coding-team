@@ -2,4 +2,6 @@
     <string name="app_name">teamSCoding</string>
     <string name="SignUp">Sign Up</string>
     <string name="SignIn">Sign In</string>
+    <string name="CariArtikel">Cari Artikel ...</string>
+    <string name="CariBelanja">Cari Belanjaan ...</string>
 </resources>
