@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
+import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
 fun loginPage() {
@@ -46,6 +47,7 @@ fun loginPage() {
             Text(
                 text = "LOGIN",
                 fontSize = 40.sp,
+                fontFamily = poppinsFontFamily,
                 fontWeight = FontWeight.W900,
                 color = Color(0xFF2C5F2D),
                 modifier = Modifier
@@ -80,7 +82,7 @@ fun loginPage() {
         )
 
         if (showUsernameError) {
-            Text(text = "Username or Email cannot be empty", color = Color.Red, fontSize = 12.sp)
+            Text(text = "Username or Email cannot be empty", color = Color.Red, fontFamily = poppinsFontFamily, fontSize = 12.sp)
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -111,14 +113,15 @@ fun loginPage() {
         )
 
         if (showPasswordError) {
-            Text(text = "Password cannot be empty", color = Color.Red, fontSize = 12.sp)
+            Text(text = "Password cannot be empty", color = Color.Red, fontFamily = poppinsFontFamily, fontSize = 12.sp)
         }
 
         Spacer(modifier = Modifier.height(20.dp))
-        
+
         Text(
             text = "Forgot Password?",
             fontSize = 14.sp,
+            fontFamily = poppinsFontFamily,
             color = Color.Blue,
             modifier = Modifier.align(Alignment.End)
         )
@@ -135,7 +138,7 @@ fun loginPage() {
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF08B28D))
         ) {
-            Text(text = "Login", color = Color.White)
+            Text(text = "Login", fontFamily = poppinsFontFamily, color = Color.White)
         }
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -145,7 +148,7 @@ fun loginPage() {
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD9D9D9))
         ) {
-            Text(text = "Login with Google", color = Color.Black)
+            Text(text = "Login with Google", fontFamily = poppinsFontFamily, color = Color.Black)
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -157,11 +160,13 @@ fun loginPage() {
             Text(
                 text = "Don't have an account yet? ",
                 fontSize = 14.sp,
+                fontFamily = poppinsFontFamily,
                 color = Color.Black
             )
             Text(
                 text = "Register",
                 fontSize = 14.sp,
+                fontFamily = poppinsFontFamily,
                 color = Color.Blue
             )
         }

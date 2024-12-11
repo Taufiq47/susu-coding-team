@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
+import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
 fun loginsign() {
@@ -77,7 +78,8 @@ fun loginsign() {
             ) {
                 Text(
                     text = stringResource(R.string.SignUp),
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
+                    fontFamily = poppinsFontFamily
                 )
             }
 
@@ -96,7 +98,8 @@ fun loginsign() {
             ) {
                 Text(
                     text = stringResource(R.string.SignIn),
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
+                    fontFamily = poppinsFontFamily
                 )
             }
         }

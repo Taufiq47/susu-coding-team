@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import com.example.teamscoding.R
 import com.example.teamscoding.components.BelanjaItem
 import com.example.teamscoding.components.SearchBar
+import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
 fun BelanjaPage() {
@@ -65,7 +66,8 @@ fun BelanjaPage() {
                 ) {
                     Text(
                         text = "Belanja Saja Disini!",
-                        fontSize = 26.sp,
+                        fontSize = 23.sp,
+                        fontFamily = poppinsFontFamily,
                         fontWeight = FontWeight.W800,
                         color = Color(0xFF2C5F2D),
                         modifier = Modifier.weight(1f)
