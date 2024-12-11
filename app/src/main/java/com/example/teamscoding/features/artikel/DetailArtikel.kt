@@ -57,7 +57,13 @@ fun DetailArtikel(navController: NavController) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(vertical = 15.dp, horizontal = 24.dp),
+            .padding(
+                start = 15.dp,
+                top = 30.dp,
+                end = 15.dp,
+                bottom = 120.dp
+            )
+        ,
         verticalArrangement = Arrangement.spacedBy(18.dp)
     ) {
         item {

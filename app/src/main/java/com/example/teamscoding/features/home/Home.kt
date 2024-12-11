@@ -1,4 +1,4 @@
-package com.example.teamscoding.features.beranda
+package com.example.teamscoding.features.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -149,3 +149,4 @@ fun FeatureCard(
 fun PreviewHomePage() {
     HomePage()
 }
+

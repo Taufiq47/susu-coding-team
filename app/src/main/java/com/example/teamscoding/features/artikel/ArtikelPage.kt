@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Arrangement.Top
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -48,7 +49,13 @@ fun ArtikelPage(navController: NavHostController) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(vertical = 15.dp, horizontal = 15.dp),
+            .padding(
+                start = 15.dp,
+                top = 30.dp,
+                end = 15.dp,
+                bottom = 100.dp
+            )
+        ,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         item {
