@@ -38,7 +38,7 @@ import com.example.teamscoding.components.textField
 import com.example.teamscoding.ui.theme.BackroundListArtikel
 
 @Composable
-fun artikelPage() {
+fun ArtikelPage() {
     var searchQuery by remember { mutableStateOf("") }
 
     LazyColumn(
@@ -83,5 +83,5 @@ fun artikelPage() {
 @Preview
 @Composable
 fun artikelView() {
-    artikelPage()
+    ArtikelPage()
 }

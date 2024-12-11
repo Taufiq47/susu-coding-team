@@ -50,7 +50,7 @@ import com.example.teamscoding.ui.theme.GreenText
 import com.example.teamscoding.ui.theme.poppinsFontFamily
 
 @Composable
-fun detailArtikel(onIconClick: () -> Unit) {
+fun DetailArtikel(onIconClick: () -> Unit) {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -319,5 +319,5 @@ fun detailArtikel(onIconClick: () -> Unit) {
 @Preview
 @Composable
 fun DetailView() {
-    detailArtikel(onIconClick = {})
+    DetailArtikel(onIconClick = {})
 }
