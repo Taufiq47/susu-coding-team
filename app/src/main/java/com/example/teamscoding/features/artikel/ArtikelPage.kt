@@ -29,6 +29,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.teamscoding.R
 import com.example.teamscoding.components.DropdownTextField
 import com.example.teamscoding.components.KategoriDropdown
 import com.example.teamscoding.components.SearchBar
@@ -56,7 +57,8 @@ fun artikelPage() {
                 SearchBar(
                     query = searchQuery,
                     onQueryChanged = { newQuery -> searchQuery = newQuery },
-                    onIconClick = {}
+                    onIconClick = {},
+                    placeholderTextId = R.string.CariArtikel
                 )
 
                 KategoriDropdown(label = "Kategori")

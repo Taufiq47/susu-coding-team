@@ -8,6 +8,7 @@ import com.example.teamscoding.features.artikel.artikelPage
 import com.example.teamscoding.features.auth.SignUpPage
 import com.example.teamscoding.features.auth.loginPage
 import com.example.teamscoding.features.auth.loginsign
+import com.example.teamscoding.features.belanja.BelanjaPage
 
 
 class MainActivity : ComponentActivity() {
